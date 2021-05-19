@@ -1,0 +1,17 @@
+.carousel-item{
+   height: 300px;
+} 
+.carousel-item img{
+   height: 300px;
+}
+.card-image{
+   height:300px;
+  
+
+}
+.icon img{
+   height: 60px;
+}
+.icon{
+   background-color:mediumspringgreen;
+}

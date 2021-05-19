@@ -1,0 +1,23 @@
+<p>pantone works!</p>
+
+<table class="table">
+    <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Year</th>
+    <th>Pantone Value</th>
+</tr>
+</thead >
+<tbody *ngFor="let p of mydata.data">
+    <tr>
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.color}}</td>
+        <td>{{p.year}}</td>
+        <td>{{p.pantone_value}}</td>
+    </tr>
+</tbody>
+</table>
+

@@ -1,0 +1,41 @@
+
+<div class="display-2 bg-warning border border-5 border-danger text-center text-success">Users Details</div>
+
+<div class="row row-cols-sm-2  g-5 m-2">
+    <div class="col" *ngFor="let p of users;let ind=index" >
+
+        <div class="card" >
+          <div class="card-body p-0 ">
+            <div class="card-title text-center bg-dark text-white p-2"><strong>Id={{p.id}} </strong></div>
+           <div class="row">
+            <div class="col-sm-1"> </div>
+                <div class="col-sm-4  bg-warning">  <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png"  class="card-img-top" alt="..."></div>
+                 <div class="col-sm-6 border border-4"> 
+                   <p class="card-text">Name : {{p.name}}</p>
+                  <p class="card-text">Username : {{p.username}}</p>
+                  <p class="card-text">Email : {{p.email}}</p>
+                  <p class="card-text">website: {{p.website}}</p>
+                  <p class="card-text"> Phone : {{p.phone}}</p>
+                 </div>
+                 <div class="col-sm-1"> </div>
+            <div class="row m-2">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-6">
+              
+                <p class="card-text">Company name : {{p.company.name}}</p>
+                <p class="card-text">Catch phrase : {{p.company.catchPhrase}} </p>
+                <p class="card-text">bs  : {{p.company.bs}} </p>
+              </div>
+              <div class="col-sm-4 pb-3 ">
+                 <p class="card-title"><strong>Adress</strong> <br>
+                 <p class="card-text"> street : {{p.address.street}}</p>
+                 <p class="card-text">suite : {{p.address.suite}}</p>
+                 <p class="card-text">City : {{p.address.city}}</p>
+                 <p class="card-text">zipcode : {{p.address.zipcode}} </p>
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+</div>
+
+
+  
