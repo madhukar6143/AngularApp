@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { PantoneService } from '../pantone.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-pantone',
@@ -11,7 +11,7 @@ export class PantoneComponent implements OnInit {
   
   mydata;
 
-  constructor(private serviceObject:PantoneService) { }
+  constructor(private serviceObject:DataService) { }
 
   ngOnInit(){
  

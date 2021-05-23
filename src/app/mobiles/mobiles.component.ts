@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MobilesService } from '../mobiles.service';
+import { DataService } from '../data.service';
 import { Product } from '../models/product.model';
 
 
@@ -15,12 +15,13 @@ export class MobilesComponent implements OnInit {
 
   mobiles:Product[]=[];
 
-  constructor(private dsObj:MobilesService){}
+  constructor(private dsObj:DataService){}
   ngOnInit(){
  
     this.dsObj.getMobileData().subscribe(
     data=>
-    {this.mobiles=data},
+    {this.mobiles=data
+    },
     err=>{console.log(err)
     }
     )

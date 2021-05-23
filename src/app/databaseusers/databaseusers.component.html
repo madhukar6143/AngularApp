@@ -1,0 +1,10 @@
+<div class="container mt-2" style="text-align:center;">
+<table class="table ">
+  <tr>
+  <th class="border border-4 border-dark display-6 ">ID</th>
+</tr>
+<div *ngFor="let p of users " class="m-3 " >
+  <div ><button class="  btn btn-warning p-2" (click)="selectbyid(p.id)" > {{p.id}}</button> </div>
+</div>
+  </table>
+</div>

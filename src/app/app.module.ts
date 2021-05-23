@@ -15,6 +15,8 @@ import { MydataComponent } from './mydata/mydata.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PantoneComponent } from './pantone/pantone.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { DatabaseusersComponent } from './databaseusers/databaseusers.component';
+import { DbusersdetailsComponent } from './dbusersdetails/dbusersdetails.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +33,13 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     MydataComponent,
     PantoneComponent,
     UserdetailsComponent,
+    DatabaseusersComponent,
+    DbusersdetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

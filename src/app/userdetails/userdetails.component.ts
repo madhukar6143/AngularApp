@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { UserdetailsService } from '../userdetails.service'
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-userdetails',
@@ -11,7 +12,7 @@ export class UserdetailsComponent implements OnInit,OnDestroy {
  
   users;
   mysub:Subscription;
-  constructor(private myObj:UserdetailsService) { }
+  constructor(private myObj:DataService,private ra:Router) { }
 
   ngOnInit():void{
 
@@ -33,4 +34,5 @@ export class UserdetailsComponent implements OnInit,OnDestroy {
   ngOnDestroy(){
     this.mysub.unsubscribe();
   }
+ 
 }

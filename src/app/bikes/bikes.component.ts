@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BikesService } from '../bikes.service';
+import { DataService } from '../data.service';
 import { Product } from '../models/product.model';
 
 @Component({
@@ -10,9 +10,18 @@ import { Product } from '../models/product.model';
 export class BikesComponent implements OnInit {
 
 bikes:Product[]=[]
-constructor(private dsObj:BikesService){}
+constructor(private dsObj:DataService){}
 ngOnInit(){
-  this.bikes=(this.dsObj.getBikeData());
+  this.dsObj.getBikeData().subscribe(
+    data=>
+    {
+      this.bikes=data;
+    },
+    err=>
+    {
+      console.log("err is",err)
+    }
+  );
 }
   
 }

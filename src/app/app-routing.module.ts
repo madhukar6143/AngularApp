@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BikesComponent } from './bikes/bikes.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DatabaseusersComponent } from './databaseusers/databaseusers.component';
+import { DbusersdetailsComponent } from './dbusersdetails/dbusersdetails.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
@@ -17,6 +19,7 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
+
   {path:'products',component:ProductsComponent,children:[
     {
       path:"mobiles",component:MobilesComponent
@@ -40,7 +43,13 @@ const routes: Routes = [
     {path:'',redirectTo:'\mobiles',pathMatch:'full'}
     
   ]},
+
+  {path:'dbuser',component:DatabaseusersComponent},
+
+  {path:'dbuser/:id' ,component:DbusersdetailsComponent },
+
   {path:'contactus',component:ContactusComponent},
+  
   {path:'',redirectTo:'\home',pathMatch:'full'}
 ];
 

@@ -1,0 +1,44 @@
+
+<div class="display-2 bg-warning border border-5 border-danger text-center text-success">DataBase Users Details</div>
+
+<div class="row row-cols-sm-2  g-5 m-2">
+    <div class="col mx-auto">
+
+        <div class="card border border-danger border-4" >
+          <div class="card-body  ">
+              <div class="row m-2">
+        
+                   <div class="col-sm-11  pt-3 text-center bg-dark text-white "><strong>Id={{users.id}}</strong></div>
+                  <div class="col-sm-1 p-2 bg-dark text-white " ><button class="btn btn-danger" (click)="goback123()">X</button></div>
+              </div>
+           <div class="row">
+            <div class="col-sm-1"> </div>
+                <div class="col-sm-4 m-1  ">  <img [src]="users.profile"  class="card-img-top" alt="..."></div>
+                 <div class="col-sm-6 border border-4"> 
+                   <p class="card-text">Name      : {{users.name}}</p>
+                  <p class="card-text">Profession : {{users.profession}}</p>
+                  <p class="card-text">Email      : {{users.email}}</p>
+                 </div>
+                 <div class="col-sm-1"> </div>
+            <div class="row m-2">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-5 pb-3 ">
+                <p class="card-title"><strong>Adress</strong> <br>
+                <p class="card-text">Street  : {{users.address.street}}</p>
+                <p class="card-text">Suite   : {{users.address.suite}}</p>
+                <p class="card-text">City    : {{users.address.city}}</p>
+                <p class="card-text">Zipcode : {{users.address.zipcode}} </p>
+             </div>
+              <div class="col-sm-5">
+                <p class="card-text">Website  : {{users.website}}</p>
+                <p class="card-text">Contactus: {{users.email}}</p>
+      
+              
+               </div>
+
+              <div class="col-sm-1"></div>
+            </div>
+</div>
+
+
+  
